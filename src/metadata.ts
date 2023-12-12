@@ -1,0 +1,7 @@
+/* eslint-disable */
+export default async () => {
+    const t = {
+        ["./user/entities/user.entity"]: await import("./user/entities/user.entity")
+    };
+    return { "@nestjs/swagger": { "models": [[import("./user/dto/create-user.dto"), { "CreateUserDto": { id: { required: true, type: () => Number, description: "\u4E3B\u952E" }, firstName: { required: true, type: () => String, description: "\u59D3\u6C0F" }, lastName: { required: true, type: () => String, description: "\u540D\u5B57" }, isActive: { required: true, type: () => Boolean, description: "\u662F\u5426\u53EF\u7528" } } }], [import("./user/dto/update-user.dto"), { "UpdateUserDto": {} }], [import("./user/entities/user.entity"), { "User": { id: { required: true, type: () => Number }, firstName: { required: true, type: () => String }, lastName: { required: true, type: () => String }, isActive: { required: true, type: () => Boolean } } }]], "controllers": [[import("./app.controller"), { "AppController": { "getHello": { type: String } } }], [import("./user/user.controller"), { "UserController": { "create": {}, "findAll": { type: [t["./user/entities/user.entity"].User] }, "findException": {}, "findOne": { type: t["./user/entities/user.entity"].User }, "update": {}, "remove": {} } }]] } };
+};
