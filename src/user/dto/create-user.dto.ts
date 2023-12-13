@@ -1,16 +1,12 @@
 export class CreateUserDto {
   /**
-   * 主键
-   */
-  id: number;
-  /**
    * 姓氏
    */
-  firstName: string;
+  userName: string;
   /**
-   * 名字
+   * 密码
    */
-  lastName: string;
+  password: string;
   /**
    * 是否可用
    */
